@@ -1,0 +1,22 @@
+
+img{
+    width: 20%;
+    border-radius: 55%;
+}
+/* #h1{
+    margin-left: 22%;
+    margin-top: 2rem;
+} */
+ p,li{
+    font-size: 1.5rem;
+    
+ }
+
+ h1{        
+    font-size: 3rem;
+ }  
+
+ a{
+    text-decoration: none;
+    color: black;
+ }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Company</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .logo img {
+            height: 40px; /* Adjust height according to your logo */
+        }
+
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
+
+        .nav {
+            display: flex;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav ul li {
+            margin: 0 15px;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block; /* Show hamburger menu on smaller screens */
+            }
+
+            .nav {
+                display: none; /* Hide nav on smaller screens */
+                flex-direction: column;
+                position: absolute;
+                top: 60px; /* Position below the header */
+                right: 20px;
+                background-color: #333;
+                width: 200px;
+                z-index: 1000;
+            }
+
+            .nav.active {
+                display: flex; /* Show nav when active */
+            }
+
+            .nav ul {
+                flex-direction: column; /* Stack items vertically */
+                width: 100%; /* Full width */
+            }
+
+            .nav ul li {
+                margin: 10px 0;
+                text-align: center; /* Center align items */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="indian.jpg" alt="Car Company Logo" />
+        
+    </div>
+    <h1 style="margin-left: -30rem;">Indian Company</h1>
+    <div class="hamburger" id="hamburger">
+        &#9776; <!-- Unicode character for hamburger icon -->
+    </div>
+    <nav class="nav" id="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    document.getElementById('hamburger').onclick = function() {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active');
+    };
+</script>
+
+</body>
+</html>
